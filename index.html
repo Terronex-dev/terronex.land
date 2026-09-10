@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Terronex Land — Utility Land Rights &amp; Non-Environmental Permits</title>
-  <meta name="description" content="Terronex LLC — Mid-Atlantic utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title, acquisition, occupancy permits, and construction field support. Software tool: ROWFlow." />
+  <meta name="description" content="Terronex LLC — Mid-Atlantic utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title, acquisition, occupancy permits, and construction field support. Software tools: ROWFlow and Project Visibility." />
   <link rel="canonical" href="https://terronex.land/" />
   <meta name="theme-color" content="#0F766E" />
   <meta property="og:type" content="website" />
@@ -23,7 +23,7 @@
     "alternateName": "Terronex Land",
     "url": "https://terronex.land/",
     "email": "hello@terronex.land",
-    "description": "Mid-Atlantic utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title research, acquisition, highway/rail/occupancy permits, planning, construction field support, and permit compliance. Software tool: ROWFlow.",
+    "description": "Mid-Atlantic utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title research, acquisition, highway/rail/occupancy permits, planning, construction field support, and permit compliance. Software tools: ROWFlow and Project Visibility.",
     "areaServed": [
       {"@type": "State", "name": "Virginia"},
       {"@type": "State", "name": "West Virginia"},
@@ -62,6 +62,15 @@
           "url": "https://rowflow-alpha.vercel.app",
           "applicationCategory": "BusinessApplication",
           "description": "Acquisition workflow tracking for utility land projects."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "SoftwareApplication",
+          "name": "Project Visibility",
+          "applicationCategory": "BusinessApplication",
+          "description": "Client login reporting with real-time project tracking, budget visibility, and shareable customizable reports. Mobile coming soon."
         }
       }
     ],
@@ -398,10 +407,9 @@
 
     .products-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 1.25rem;
       margin-bottom: 1.5rem;
-      max-width: 34rem;
     }
 
     .product-tile {
@@ -467,6 +475,30 @@
       color: #CBD5E1;
       flex: 1;
       margin-bottom: 1.15rem;
+    }
+    .product-features {
+      list-style: none;
+      display: grid;
+      gap: 0.45rem;
+      margin: 0 0 1.15rem;
+      flex: 1;
+    }
+    .product-features li {
+      font-size: 0.9rem;
+      color: #CBD5E1;
+      padding-left: 1.1rem;
+      position: relative;
+      line-height: 1.35;
+    }
+    .product-features li::before {
+      content: "·";
+      position: absolute;
+      left: 0.2rem;
+      color: var(--teal-soft);
+      font-weight: 700;
+    }
+    .product-hit.static {
+      cursor: default;
     }
 
     .product-cta-row {
@@ -791,15 +823,16 @@
 
   <section class="products" id="products">
     <div class="wrap">
-      <p class="section-label">Product · Software tool</p>
-      <h2>ROWFlow—software the desk runs on.</h2>
-      <p class="lede">Not slideware. ROWFlow is the acquisition workflow tool we use (and demo) to keep large land projects reportable, visible, cost-aware, and organized from kickoff through restore.</p>
+      <p class="section-label">Products · Software tools</p>
+      <h2>Software the desk runs on.</h2>
+      <p class="lede">Not slideware. Tools we use (and demo) to keep land projects reportable, visible, cost-aware, and organized from kickoff through restore.</p>
 
-      <div class="benefit-row" aria-label="What ROWFlow delivers">
+      <div class="benefit-row" aria-label="What the tools deliver">
         <div class="benefit"><strong>Better reporting</strong> Shareable status so sponsors are not chasing updates.</div>
         <div class="benefit"><strong>Tracking &amp; visibility</strong> Project and tract status in one live picture.</div>
         <div class="benefit"><strong>Cost control</strong> Acquisition cost visibility that helps limit spend.</div>
         <div class="benefit"><strong>Large-project org</strong> Structure for corridors with hundreds of tracts.</div>
+        <div class="benefit"><strong>Permit tracking &amp; compliance</strong> Occupancy conditions, renewals, and closeout status stay current.</div>
       </div>
 
       <div class="products-grid">
@@ -812,6 +845,24 @@
           </a>
           <div class="product-cta-row">
             <a class="demo-link" href="mailto:hello@terronex.land?subject=ROWFlow%20demo">Request a demo</a>
+          </div>
+        </article>
+
+        <article class="product-tile">
+          <div class="product-hit static">
+            <span class="product-badge">Software tool</span>
+            <h3>Project Visibility</h3>
+            <p>Client-ready reporting and live project status—built so sponsors see the same picture the desk runs.</p>
+            <ul class="product-features">
+              <li>Tracks status and shareable reports</li>
+              <li>Keeps budget visible across the job</li>
+              <li>Customizable for each project’s needs</li>
+              <li>Client login for full visibility and real-time tracking</li>
+              <li>Mobile coming soon</li>
+            </ul>
+          </div>
+          <div class="product-cta-row">
+            <a class="demo-link" href="mailto:hello@terronex.land?subject=Project%20Visibility%20demo">Request a demo</a>
           </div>
         </article>
       </div>
