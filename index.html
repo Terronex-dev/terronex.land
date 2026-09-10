@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Terronex Land — Utility Land Rights &amp; Non-Environmental Permits</title>
-  <meta name="description" content="Terronex LLC — Mid-Atlantic utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title, acquisition, occupancy permits, and construction field support. Software tools: ROWFlow and Project Visibility." />
+  <meta name="description" content="Terronex LLC — Mid-Atlantic utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title, acquisition, occupancy permits, and construction field support. Software tool: ROWFlow." />
   <link rel="canonical" href="https://terronex.land/" />
   <meta name="theme-color" content="#0F766E" />
   <meta property="og:type" content="website" />
@@ -23,7 +23,7 @@
     "alternateName": "Terronex Land",
     "url": "https://terronex.land/",
     "email": "hello@terronex.land",
-    "description": "Mid-Atlantic utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title research, acquisition, highway/rail/occupancy permits, planning, construction field support, and permit compliance. Software tools: ROWFlow and Project Visibility.",
+    "description": "Mid-Atlantic utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title research, acquisition, highway/rail/occupancy permits, planning, construction field support, and permit compliance. Software tool: ROWFlow.",
     "areaServed": [
       {"@type": "State", "name": "Virginia"},
       {"@type": "State", "name": "West Virginia"},
@@ -61,16 +61,7 @@
           "name": "ROWFlow",
           "url": "https://rowflow-alpha.vercel.app",
           "applicationCategory": "BusinessApplication",
-          "description": "Acquisition workflow tracking for utility land projects."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "SoftwareApplication",
-          "name": "Project Visibility",
-          "applicationCategory": "BusinessApplication",
-          "description": "Client login reporting with real-time project tracking, budget visibility, and shareable customizable reports. Mobile coming soon."
+          "description": "Acquisition workflow tracking with client-ready reporting, budget visibility, shareable customizable reports, client login for real-time status, and permit tracking. Mobile coming soon."
         }
       }
     ],
@@ -407,7 +398,7 @@
 
     .products-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 1.25rem;
       margin-bottom: 1.5rem;
     }
@@ -499,6 +490,43 @@
     }
     .product-hit.static {
       cursor: default;
+    }
+
+    .product-tile-wide {
+      grid-column: 1 / -1;
+    }
+    .product-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100%;
+    }
+    .product-main {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid rgba(148, 163, 184, 0.2);
+    }
+    .product-aside {
+      padding: 1.6rem 1.45rem 1.35rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .aside-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--teal-soft);
+      margin-bottom: 0.75rem;
+    }
+    .aside-lead {
+      font-size: 0.95rem;
+      color: #CBD5E1;
+      margin-bottom: 1rem;
+      line-height: 1.45;
+    }
+    @media (max-width: 900px) {
+      .product-split { grid-template-columns: 1fr; }
+      .product-main { border-right: none; border-bottom: 1px solid rgba(148, 163, 184, 0.2); }
     }
 
     .product-cta-row {
@@ -823,11 +851,11 @@
 
   <section class="products" id="products">
     <div class="wrap">
-      <p class="section-label">Products · Software tools</p>
-      <h2>Software the desk runs on.</h2>
-      <p class="lede">Not slideware. Tools we use (and demo) to keep land projects reportable, visible, cost-aware, and organized from kickoff through restore.</p>
+      <p class="section-label">Product · Software tool</p>
+      <h2>ROWFlow—software the desk runs on.</h2>
+      <p class="lede">Not slideware. ROWFlow is the acquisition workflow tool we use (and demo) to keep land projects reportable, visible, cost-aware, and organized from kickoff through restore.</p>
 
-      <div class="benefit-row" aria-label="What the tools deliver">
+      <div class="benefit-row" aria-label="What ROWFlow delivers">
         <div class="benefit"><strong>Better reporting</strong> Shareable status so sponsors are not chasing updates.</div>
         <div class="benefit"><strong>Tracking &amp; visibility</strong> Project and tract status in one live picture.</div>
         <div class="benefit"><strong>Cost control</strong> Acquisition cost visibility that helps limit spend.</div>
@@ -836,33 +864,30 @@
       </div>
 
       <div class="products-grid">
-        <article class="product-tile">
-          <a class="product-hit" href="https://rowflow-alpha.vercel.app" target="_blank" rel="noopener noreferrer">
-            <span class="product-badge">Software tool</span>
-            <h3>ROWFlow</h3>
-            <p>Acquisition workflow tracking—who owns what, offers and signatures pending, and what is ready for construction. Status and cost visibility stay transparent for PMs and sponsors.</p>
-            <span class="open-product">Open product <span class="chev" aria-hidden="true">→</span></span>
-          </a>
-          <div class="product-cta-row">
-            <a class="demo-link" href="mailto:hello@terronex.land?subject=ROWFlow%20demo">Request a demo</a>
-          </div>
-        </article>
-
-        <article class="product-tile">
-          <div class="product-hit static">
-            <span class="product-badge">Software tool</span>
-            <h3>Project Visibility</h3>
-            <p>Client-ready reporting and live project status—built so sponsors see the same picture the desk runs.</p>
-            <ul class="product-features">
-              <li>Tracks status and shareable reports</li>
-              <li>Keeps budget visible across the job</li>
-              <li>Customizable for each project’s needs</li>
-              <li>Client login for full visibility and real-time tracking</li>
-              <li>Mobile coming soon</li>
-            </ul>
-          </div>
-          <div class="product-cta-row">
-            <a class="demo-link" href="mailto:hello@terronex.land?subject=Project%20Visibility%20demo">Request a demo</a>
+        <article class="product-tile product-tile-wide">
+          <div class="product-split">
+            <div class="product-main">
+              <a class="product-hit" href="https://rowflow-alpha.vercel.app" target="_blank" rel="noopener noreferrer">
+                <span class="product-badge">Software tool</span>
+                <h3>ROWFlow</h3>
+                <p>Acquisition workflow tracking—who owns what, offers and signatures pending, and what is ready for construction. Status and cost visibility stay transparent for PMs and sponsors.</p>
+                <span class="open-product">Open product <span class="chev" aria-hidden="true">→</span></span>
+              </a>
+              <div class="product-cta-row">
+                <a class="demo-link" href="mailto:hello@terronex.land?subject=ROWFlow%20demo">Request a demo</a>
+              </div>
+            </div>
+            <div class="product-aside">
+              <p class="aside-label">Project visibility</p>
+              <p class="aside-lead">Client-ready reporting and live project status—built so sponsors see the same picture the desk runs.</p>
+              <ul class="product-features">
+                <li>Tracks status and shareable reports</li>
+                <li>Keeps budget visible across the job</li>
+                <li>Customizable for each project’s needs</li>
+                <li>Client login for full visibility and real-time tracking</li>
+                <li>Mobile coming soon</li>
+              </ul>
+            </div>
           </div>
         </article>
       </div>
@@ -873,6 +898,7 @@
       </p>
     </div>
   </section>
+
 
   <section class="markets" id="markets">
     <div class="wrap">
