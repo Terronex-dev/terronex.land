@@ -1268,7 +1268,7 @@
               <input id="estimate-area" name="area_sq_miles" type="number" inputmode="decimal" min="0" step="any" aria-describedby="estimate-scale-hint estimate-scale-error" />
             </div>
           </div>
-          <p class="field-error" id="estimate-scale-error" hidden>Enter line length (miles) or area (sq miles).</p>
+          <p class="field-error" id="estimate-scale-error" role="alert" hidden>Enter line length (miles) or area (sq miles).</p>
         </div>
         <fieldset>
           <legend class="services-legend">Services</legend>
@@ -1352,7 +1352,8 @@
       }
 
       function clearScaleError() {
-        if (lineInput) lineInput.setCustomValidity("");
+        if (lineInput) lineInput.removeAttribute("aria-invalid");
+        if (areaInput) areaInput.removeAttribute("aria-invalid");
         if (scaleError) scaleError.hidden = true;
       }
 
@@ -1370,9 +1371,15 @@
           var line = fieldValue("estimate-line");
           var area = fieldValue("estimate-area");
           if (!line && !area) {
-            if (lineInput) lineInput.setCustomValidity("Enter line length or area.");
-            if (scaleError) scaleError.hidden = false;
-            form.reportValidity();
+            if (lineInput) {
+              lineInput.setAttribute("aria-invalid", "true");
+              lineInput.focus();
+            }
+            if (areaInput) areaInput.setAttribute("aria-invalid", "true");
+            if (scaleError) {
+              scaleError.hidden = false;
+              scaleError.scrollIntoView({ block: "nearest" });
+            }
             return;
           }
 
@@ -1406,8 +1413,14 @@
             DISCLAIMER
           ].join("\n");
 
-          window.location.href = "mailto:hello@terronex.land?subject=" +
+          var mailto = "mailto:hello@terronex.land?subject=" +
             encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+          var mailLink = document.createElement("a");
+          mailLink.href = mailto;
+          mailLink.style.display = "none";
+          document.body.appendChild(mailLink);
+          mailLink.click();
+          mailLink.remove();
         });
       }
 
