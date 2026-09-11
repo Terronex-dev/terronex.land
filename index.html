@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Terronex Land — Utility Land Rights &amp; Non-Environmental Permits</title>
-  <meta name="description" content="Terronex LLC — utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title, acquisition, occupancy permits, and construction field support. Software tool: ROWFlow." />
+  <meta name="description" content="Terronex LLC — utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title, acquisition, occupancy permits, and construction field support. Software tools: ROWFlow, Tractsource, and ROWScope." />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=tl1" media="(prefers-color-scheme: light)" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=tl1" media="(prefers-color-scheme: light)" />
@@ -31,7 +31,7 @@
     "alternateName": "Terronex Land",
     "url": "https://terronex.land/",
     "email": "hello@terronex.land",
-    "description": "Utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title research, acquisition, highway/rail/occupancy permits, planning, construction field support, and permit compliance. Software tool: ROWFlow.",
+    "description": "Utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title research, acquisition, highway/rail/occupancy permits, planning, construction field support, and permit compliance. Software tools: ROWFlow, Tractsource, and ROWScope.",
     "areaServed": {
       "@type": "Country",
       "name": "United States"
@@ -65,6 +65,26 @@
           "url": "https://rowflow-alpha.vercel.app",
           "applicationCategory": "BusinessApplication",
           "description": "Acquisition workflow tracking with client-ready reporting, budget visibility, shareable customizable reports, client login for real-time status, and permit tracking. Mobile coming soon."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "SoftwareApplication",
+          "name": "Tractsource",
+          "url": "https://tractsource.vercel.app",
+          "applicationCategory": "BusinessApplication",
+          "description": "Corridor-first parcel extracts from open county and state GIS for land and ROW projects."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "SoftwareApplication",
+          "name": "ROWScope",
+          "url": "https://rowscope.vercel.app",
+          "applicationCategory": "BusinessApplication",
+          "description": "Corridor basis-of-estimate scoping—take matrix, budget, and encroachment screening from a Tractsource package."
         }
       }
     ],
@@ -406,9 +426,33 @@
       margin-bottom: 0.25rem;
     }
 
+    .suite-kicker {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal-soft);
+      margin: 0 0 0.85rem;
+    }
+    .suite-strip {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 0.75rem;
+      align-items: stretch;
+      margin-bottom: 2rem;
+    }
+    .suite-arrow {
+      display: flex;
+      align-items: center;
+      color: var(--teal-soft);
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+
     .products-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
       margin-bottom: 1.5rem;
     }
@@ -938,6 +982,8 @@
       .steps { grid-template-columns: 1fr 1fr; }
       .products-grid { grid-template-columns: 1fr; }
       .benefit-row { grid-template-columns: 1fr 1fr; }
+      .suite-strip { grid-template-columns: 1fr; }
+      .suite-arrow { display: none; }
     }
     @media (max-width: 720px) {
       .nav-links { display: none; }
@@ -989,11 +1035,11 @@
       <span class="eyebrow">Utility land &amp; permitting</span>
       <h1>Acquisition and permitting—managed for schedule and clean execution.</h1>
       <p class="hero-lead">
-        Terronex runs the full land stack for electric, fiber, gas, midstream, and renewables—title research, easement acquisition, highway/rail/occupancy permits, planning, construction field support, and permit compliance. We manage acquisition with schedule discipline and cost control, keep status visible, and treat landowners with respect. ROWFlow keeps reporting and costs under control.
+        Terronex runs the full land stack for electric, fiber, gas, midstream, and renewables—title research, easement acquisition, highway/rail/occupancy permits, planning, construction field support, and permit compliance. We manage acquisition with schedule discipline and cost control, keep status visible, and treat landowners with respect. ROWFlow, Tractsource, and ROWScope keep parcels, scoping, reporting, and costs visible.
       </p>
       <div class="hero-actions">
         <button type="button" class="btn btn-primary" data-estimate-open>Request a project estimate</button>
-        <a class="btn btn-ghost" href="#products">See ROWFlow</a>
+        <a class="btn btn-ghost" href="#products">See the products</a>
       </div>
       <p class="hero-meta">Acquisition management · Execution · Title · Permits · Field support</p>
     </div>
@@ -1045,43 +1091,53 @@
 
   <section class="products" id="products">
     <div class="wrap">
-      <p class="section-label">Product · Software tool</p>
-      <h2>ROWFlow—software the desk runs on.</h2>
-      <p class="lede">Not slideware. ROWFlow is the acquisition workflow tool we use (and demo) to keep land projects reportable, visible, cost-aware, and organized from kickoff through restore.</p>
+      <p class="section-label">Products · Software tools</p>
+      <h2>Software the land desk runs on.</h2>
+      <p class="lede">These are not slideware. They are the software tools we use (and demo) to keep land projects reportable, visible, cost-aware, and organized from kickoff through restore.</p>
 
-      <div class="benefit-row" aria-label="What ROWFlow delivers">
-        <div class="benefit"><strong>Better reporting</strong> Shareable status so sponsors are not chasing updates.</div>
-        <div class="benefit"><strong>Tracking &amp; visibility</strong> Project and tract status in one live picture.</div>
-        <div class="benefit"><strong>Cost control</strong> Acquisition cost visibility that helps limit spend.</div>
-        <div class="benefit"><strong>Large-project org</strong> Structure for corridors with hundreds of tracts.</div>
-        <div class="benefit"><strong>Permit tracking &amp; compliance</strong> Occupancy conditions, renewals, and closeout status stay current.</div>
+      <p class="suite-kicker">Extract → scope → acquire</p>
+      <div class="suite-strip" aria-label="Suite path: Tractsource packages corridor parcels, ROWScope scopes the BOE, ROWFlow runs acquisition">
+        <div class="benefit"><strong>Tractsource</strong> Corridor parcels from open county and state GIS—package the tract list for the job.</div>
+        <div class="suite-arrow" aria-hidden="true">→</div>
+        <div class="benefit"><strong>ROWScope</strong> BOE scoping—take matrix, budget, and encroachment flags. A desk estimate, not an offer.</div>
+        <div class="suite-arrow" aria-hidden="true">→</div>
+        <div class="benefit"><strong>ROWFlow</strong> Live acquisition—status, offers, reporting, and cost visibility through restore.</div>
       </div>
 
       <div class="products-grid">
-        <article class="product-tile product-tile-wide">
-          <div class="product-split">
-            <div class="product-main">
-              <a class="product-hit" href="https://rowflow-alpha.vercel.app" target="_blank" rel="noopener noreferrer">
-                <span class="product-badge">Software tool</span>
-                <h3>ROWFlow</h3>
-                <p>Acquisition workflow tracking—who owns what, offers and signatures pending, and what is ready for construction. Status and cost visibility stay transparent for PMs and sponsors.</p>
-                <span class="open-product">Open product <span class="chev" aria-hidden="true">→</span></span>
-              </a>
-              <div class="product-cta-row">
-                <a class="demo-link" href="mailto:hello@terronex.land?subject=ROWFlow%20demo">Request a demo</a>
-              </div>
-            </div>
-            <div class="product-aside">
-              <p class="aside-label">Project visibility</p>
-              <p class="aside-lead">Client-ready reporting and live project status—built so sponsors see the same picture the desk runs.</p>
-              <ul class="product-features">
-                <li>Tracks status and shareable reports</li>
-                <li>Keeps budget visible across the job</li>
-                <li>Customizable for each project’s needs</li>
-                <li>Client login for full visibility and real-time tracking</li>
-                <li>Mobile coming soon</li>
-              </ul>
-            </div>
+        <article class="product-tile">
+          <a class="product-hit" href="https://rowflow-alpha.vercel.app" target="_blank" rel="noopener noreferrer">
+            <span class="product-badge">Acquisition</span>
+            <h3>ROWFlow</h3>
+            <p>Acquisition workflow tracking—who owns what, offers and signatures pending, and what is ready for construction. Status and cost visibility stay transparent for PMs and sponsors.</p>
+            <span class="open-product">Open product <span class="chev" aria-hidden="true">→</span></span>
+          </a>
+          <div class="product-cta-row">
+            <a class="demo-link" href="mailto:hello@terronex.land?subject=ROWFlow%20demo">Request a demo</a>
+          </div>
+        </article>
+
+        <article class="product-tile">
+          <a class="product-hit" href="https://tractsource.vercel.app" target="_blank" rel="noopener noreferrer">
+            <span class="product-badge">Corridor parcels</span>
+            <h3>Tractsource</h3>
+            <p>Corridor-first parcel extracts from open county and state GIS. Honest rich/thin coverage so the desk starts from a real tract list—not a folder of emails—and can hand off into ROWFlow.</p>
+            <span class="open-product">Open product <span class="chev" aria-hidden="true">→</span></span>
+          </a>
+          <div class="product-cta-row">
+            <a class="demo-link" href="mailto:hello@terronex.land?subject=Tractsource%20demo">Request a demo</a>
+          </div>
+        </article>
+
+        <article class="product-tile">
+          <a class="product-hit" href="https://rowscope.vercel.app" target="_blank" rel="noopener noreferrer">
+            <span class="product-badge">BOE scoping</span>
+            <h3>ROWScope</h3>
+            <p>Corridor BOE scoping: Tractsource package in; take matrix, budget, and encroachment screening out—a desk estimate, not an offer. Seeds the same language ROWFlow uses once the job goes live.</p>
+            <span class="open-product">Open product <span class="chev" aria-hidden="true">→</span></span>
+          </a>
+          <div class="product-cta-row">
+            <a class="demo-link" href="mailto:hello@terronex.land?subject=ROWScope%20demo">Request a demo</a>
           </div>
         </article>
       </div>
@@ -1165,7 +1221,7 @@
         </article>
         <article class="step">
           <h3>Organize</h3>
-          <p>Load tracts and status into ROWFlow so the desk and the client share one picture.</p>
+          <p>Package corridor parcels in Tractsource, scope the BOE in ROWScope, and run acquisition in ROWFlow so the desk and the client share one picture.</p>
         </article>
         <article class="step">
           <h3>Execute</h3>
