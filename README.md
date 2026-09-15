@@ -5,10 +5,12 @@ Static marketing site for **Terronex LLC** — Utility land rights, easement acq
 ## Contents
 
 - `index.html` — single-page site (SEO: canonical, Open Graph, Twitter card, JSON-LD)
+- `404.html` — real not-found page (Cloudflare Pages static 404)
+- `privacy.html` — short Terronex LLC privacy note for the estimate form
 - `assets/` — header lockup, favicons, apple-touch icon, Open Graph image
 - `favicon.ico` — default favicon
 - `robots.txt` — allow all; sitemap pointer
-- `sitemap.xml` — homepage only
+- `sitemap.xml` — homepage and privacy
 
 ## Deploy
 
