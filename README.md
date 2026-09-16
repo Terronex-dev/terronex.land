@@ -1,6 +1,6 @@
 # terronex.land
 
-Static marketing site for **Terronex LLC** — Utility land rights, easement acquisition, and non-environmental permitting (fiber, electric, gas, midstream, renewables) — project-based across the United States. Software tools: [ROWFlow](https://rowflow.terronex.land), [Tractsource](https://tractsource.terronex.land), and [ROWScope](https://rowscope.terronex.land).
+Static marketing site for **Terronex LLC** — utility easements and non-environmental permits, midstream easements and permits, seismic permitting, and crossing agreements (rail, highway occupancy, foreign-utility crossings) — project-based across the United States. Software tools: [ROWFlow](https://rowflow.terronex.land), [Tractsource](https://tractsource.terronex.land), and [ROWScope](https://rowscope.terronex.land).
 
 ## Contents
 

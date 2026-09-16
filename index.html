@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terronex Land — Utility Land Rights &amp; Non-Environmental Permits</title>
-  <meta name="description" content="Terronex LLC — utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title, acquisition, occupancy permits, and construction field support. Software tools: ROWFlow, Tractsource, and ROWScope." />
+  <title>Terronex Land — Utility &amp; Midstream Land Rights, Seismic Permits &amp; Crossing Agreements</title>
+  <meta name="description" content="Terronex LLC — utility easements and non-environmental permits, midstream easements and permits, seismic permitting, and crossing agreements (rail, highway occupancy, and foreign-utility crossings). Title, planning, and construction field support. Software tools: ROWFlow, Tractsource, and ROWScope." />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=tl2" media="(prefers-color-scheme: light)" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=tl2" media="(prefers-color-scheme: light)" />
@@ -17,12 +17,12 @@
   <meta name="theme-color" content="#0F766E" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://terronex.land/" />
-  <meta property="og:title" content="Terronex Land — Utility Land Rights &amp; Non-Environmental Permits" />
-  <meta property="og:description" content="Terronex LLC — utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title, acquisition, occupancy permits, and construction field support." />
+  <meta property="og:title" content="Terronex Land — Utility &amp; Midstream Land Rights, Seismic Permits &amp; Crossing Agreements" />
+  <meta property="og:description" content="Terronex LLC — utility easements and non-environmental permits, midstream easements and permits, seismic permitting, and crossing agreements for rail, highway occupancy, and foreign utilities." />
   <meta property="og:site_name" content="Terronex Land" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Terronex Land — Utility Land Rights &amp; Non-Environmental Permits" />
-  <meta name="twitter:description" content="Terronex LLC — utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title, acquisition, occupancy permits, and construction field support." />
+  <meta name="twitter:title" content="Terronex Land — Utility &amp; Midstream Land Rights, Seismic Permits &amp; Crossing Agreements" />
+  <meta name="twitter:description" content="Terronex LLC — utility easements and non-environmental permits, midstream easements and permits, seismic permitting, and crossing agreements for rail, highway occupancy, and foreign utilities." />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,18 +31,19 @@
     "alternateName": "Terronex Land",
     "url": "https://terronex.land/",
     "email": "hello@terronex.land",
-    "description": "Utility easement acquisition and non-environmental land-use permitting for electric, fiber, gas, midstream, and renewables. Title research, acquisition, highway/rail/occupancy permits, planning, construction field support, and permit compliance. Software tools: ROWFlow, Tractsource, and ROWScope.",
+    "description": "Utility easements and non-environmental permits, midstream easements and permits, seismic permitting, and crossing agreements (rail, highway occupancy, and foreign-utility crossings). Title research, planning, construction field support, and permit compliance. Software tools: ROWFlow, Tractsource, and ROWScope.",
     "areaServed": {
       "@type": "Country",
       "name": "United States"
     },
     "serviceType": [
       "Utility easement acquisition",
+      "Non-environmental permitting",
+      "Midstream easement acquisition",
+      "Seismic permitting",
+      "Crossing agreements",
       "Title research",
-      "Highway occupancy permits",
-      "Railroad crossing permits",
-      "Construction field support",
-      "Land-use permitting"
+      "Construction field support"
     ],
     "knowsAbout": [
       "Right-of-way",
@@ -51,7 +52,12 @@
       "Fiber",
       "Gas",
       "Midstream",
-      "Renewables"
+      "Renewables",
+      "Seismic permitting",
+      "Crossing agreements",
+      "Highway occupancy",
+      "Railroad crossings",
+      "Foreign utility crossings"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -635,6 +641,39 @@
     }
     .products-foot a:hover { color: var(--white); }
 
+    /* —— Capability stack —— */
+    .stack { background: var(--white); border-block: 1px solid var(--line); }
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.15rem;
+    }
+    .stack-card {
+      background: var(--snow);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.25rem;
+      border-top: 3px solid var(--teal);
+    }
+    .stack-num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--teal);
+      margin-bottom: 0.4rem;
+    }
+    .stack-card h3 {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+    .stack-card p {
+      font-size: 0.9rem;
+      color: var(--slate);
+    }
+
     /* —— Markets —— */
     .markets { background: var(--white); border-block: 1px solid var(--line); }
     .market-row {
@@ -983,7 +1022,8 @@
     @media (max-width: 900px) {
       .problem-grid,
       .why-grid,
-      .service-grid { grid-template-columns: 1fr 1fr; }
+      .service-grid,
+      .stack-grid { grid-template-columns: 1fr 1fr; }
       .market-row { grid-template-columns: 1fr 1fr; }
       .steps { grid-template-columns: 1fr 1fr; }
       .products-grid { grid-template-columns: 1fr; }
@@ -1012,6 +1052,7 @@
       .problem-grid,
       .why-grid,
       .service-grid,
+      .stack-grid,
       .market-row,
       .steps,
       .benefit-row { grid-template-columns: 1fr; }
@@ -1049,6 +1090,7 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" id="nav-toggle">Menu</button>
       <ul class="nav-links" id="nav-menu">
         <li><a href="#why">Why Terronex</a></li>
+        <li><a href="#stack">Capabilities</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#coverage">Where we work</a></li>
@@ -1061,16 +1103,16 @@
   <section class="hero" id="top">
     <div class="hero-plat" aria-hidden="true"></div>
     <div class="wrap hero-inner">
-      <span class="eyebrow">Utility land &amp; permitting</span>
-      <h1>Acquisition and permitting—managed for schedule and clean execution.</h1>
+      <span class="eyebrow">The land capability stack</span>
+      <h1>Utility and midstream land rights—plus seismic permits and crossing agreements.</h1>
       <p class="hero-lead">
-        Terronex runs the full land stack for electric, fiber, gas, midstream, and renewables—title research, easement acquisition, highway/rail/occupancy permits, planning, construction field support, and permit compliance. We manage acquisition with schedule discipline and cost control, keep status visible, and treat landowners with respect. ROWFlow, Tractsource, and ROWScope keep parcels, scoping, reporting, and costs visible.
+        Terronex runs four first-class capabilities: utility easements and non-environmental permits; midstream easements and permits; seismic permitting; and crossing agreements for rail, highway occupancy, and foreign utilities. Title, planning, field support, and permit compliance stay on the same desk. We manage acquisition with schedule discipline and cost control, keep status visible, and treat landowners with respect. ROWFlow, Tractsource, and ROWScope keep parcels, scoping, reporting, and costs visible.
       </p>
       <div class="hero-actions">
         <button type="button" class="btn btn-primary" data-estimate-open>Request a project estimate</button>
-        <a class="btn btn-ghost" href="#products">See the products</a>
+        <a class="btn btn-ghost" href="#stack">See the capability stack</a>
       </div>
-      <p class="hero-meta">Acquisition management · Execution · Title · Permits · Field support</p>
+      <p class="hero-meta">Utility easements · Midstream · Seismic permitting · Crossing agreements</p>
     </div>
   </section>
 
@@ -1100,7 +1142,7 @@
     <div class="wrap">
       <p class="section-label">Why Terronex</p>
       <h2>Speed, leaner cost, and industry depth.</h2>
-      <p class="lede">A focused land desk: move tracts and permits quickly, keep acquisition cost lower than a typical competitor stack, and bring 19+ years of ROW and land experience to the table.</p>
+      <p class="lede">A focused land desk: move utility and midstream tracts, seismic permits, and crossing agreements quickly, keep acquisition cost lower than a typical competitor stack, and bring 19+ years of ROW and land experience to the table.</p>
       <div class="why-grid">
         <article class="why-card">
           <h3>Speed of execution</h3>
@@ -1112,7 +1154,37 @@
         </article>
         <article class="why-card">
           <h3>19+ years of experience</h3>
-          <p>Seasoned ROW and land practice across utility corridors—transmission and fiber through midstream and renewables—without reinventing the process on every job.</p>
+          <p>Seasoned ROW and land practice across utility and midstream corridors—transmission, fiber, seismic, and crossing agreements—without reinventing the process on every job.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="stack" id="stack">
+    <div class="wrap">
+      <p class="section-label">Capability stack</p>
+      <h2>Four first-class capabilities.</h2>
+      <p class="lede">Utility and midstream land rights, seismic permitting, and crossing agreements—scoped as agreements and permits, not a highway right-of-way acquisition shop.</p>
+      <div class="stack-grid">
+        <article class="stack-card">
+          <p class="stack-num">01</p>
+          <h3>Utility easements &amp; non-environmental permits</h3>
+          <p>Electric, fiber, gas, and renewables easement acquisition plus the non-environmental land-use and occupancy permits that keep those corridors buildable.</p>
+        </article>
+        <article class="stack-card">
+          <p class="stack-num">02</p>
+          <h3>Midstream easements &amp; permits</h3>
+          <p>Gathering, transmission, and related midstream easements—plus the non-environmental permits that sit on the same critical path as the pipe.</p>
+        </article>
+        <article class="stack-card">
+          <p class="stack-num">03</p>
+          <h3>Seismic permitting</h3>
+          <p>Landowner and surface seismic permitting for 2D/3D and geophysical programs—notice, access, permit terms, and damage protocol so the shoot can run on schedule.</p>
+        </article>
+        <article class="stack-card">
+          <p class="stack-num">04</p>
+          <h3>Crossing agreements</h3>
+          <p>Rail occupancy and crossing agreements, highway occupancy authorizations, and foreign-utility crossing agreements. Agreement work on existing corridors—not Department of Highways right-of-way acquisition.</p>
         </article>
       </div>
     </div>
@@ -1178,12 +1250,11 @@
     </div>
   </section>
 
-
   <section class="markets" id="markets">
     <div class="wrap">
       <p class="section-label">Markets</p>
       <h2>Where the work sits.</h2>
-      <p class="lede">Utility, energy, and renewables corridors that need land rights and non-environmental occupancy clearances.</p>
+      <p class="lede">Utility, midstream, and energy corridors that need easements, seismic permits, and crossing agreements—non-environmental clearances on the same desk.</p>
       <div class="market-row">
         <div class="market-chip">Electric</div>
         <div class="market-chip">Fiber</div>
@@ -1198,37 +1269,37 @@
     <div class="wrap">
       <p class="section-label">Services</p>
       <h2>What we deliver on a project.</h2>
-      <p class="lede">Six core workstreams—scoped to the job, not a laundry list.</p>
+      <p class="lede">Six core workstreams—the four capabilities plus title and field closeout, scoped to the job.</p>
       <div class="service-grid">
         <article class="service-card">
           <p class="service-num">01</p>
           <h3>Title</h3>
-          <p>Ownership research, chain review, and exception spotting so acquisition and permit filings start from solid ground.</p>
+          <p>Ownership research, chain review, and exception spotting so utility, midstream, seismic, and crossing filings start from solid ground.</p>
         </article>
         <article class="service-card">
           <p class="service-num">02</p>
-          <h3>Easement acquisition</h3>
-          <p>Owner outreach, negotiation, and document package—where permitted or licensed—through executed land rights.</p>
+          <h3>Utility &amp; midstream easements</h3>
+          <p>Owner outreach, negotiation, and document package—where permitted or licensed—through executed utility and midstream land rights, with the matching non-environmental permits.</p>
         </article>
         <article class="service-card">
           <p class="service-num">03</p>
-          <h3>Highway, rail &amp; occupancy permits</h3>
-          <p>State and local highway occupancy, railroad crossing packages, and related land-use permits that keep construction legal on the ROW.</p>
+          <h3>Seismic permitting</h3>
+          <p>Surface and landowner seismic permits for 2D/3D and geophysical programs—access, notice, terms, and damage protocol through the shoot.</p>
         </article>
         <article class="service-card">
           <p class="service-num">04</p>
+          <h3>Crossing agreements</h3>
+          <p>Secure rail, highway occupancy, and foreign-utility crossing agreements. Occupancy and crossing packages on existing corridors—not Department of Highways right-of-way acquisition.</p>
+        </article>
+        <article class="service-card">
+          <p class="service-num">05</p>
           <h3>Construction field support</h3>
           <p>ATWS and access, temporary workspace, damage settlements, and on-the-ground land support while crews are active.</p>
         </article>
         <article class="service-card">
-          <p class="service-num">05</p>
-          <h3>Planning</h3>
-          <p>Corridor strategy, tract prioritization, and sequencing so acquisition and permits align with engineering and build windows.</p>
-        </article>
-        <article class="service-card">
           <p class="service-num">06</p>
-          <h3>Permit compliance</h3>
-          <p>Conditions tracking, renewal awareness, and closeout so occupancy authorizations stay current through the life of the job.</p>
+          <h3>Planning &amp; permit compliance</h3>
+          <p>Corridor sequencing so easements, seismic, and crossing agreements align with the build window—then conditions tracking, renewals, and closeout through the life of the job.</p>
         </article>
       </div>
     </div>
@@ -1242,11 +1313,11 @@
       <div class="steps">
         <article class="step">
           <h3>Identify</h3>
-          <p>Map parcels, gaps, and permit triggers against the design and schedule.</p>
+          <p>Map parcels, gaps, seismic triggers, and crossing-agreement needs against the design and schedule.</p>
         </article>
         <article class="step">
           <h3>Plan</h3>
-          <p>Sequence title, outreach, and filings so the critical path is clear before crews mobilize.</p>
+          <p>Sequence title, outreach, seismic permits, and crossing agreements so the critical path is clear before crews mobilize.</p>
         </article>
         <article class="step">
           <h3>Organize</h3>
@@ -1254,7 +1325,7 @@
         </article>
         <article class="step">
           <h3>Execute</h3>
-          <p>Acquire, file, support the field, and restore—records closed clean at the end.</p>
+          <p>Acquire easements, file seismic and occupancy packages, secure crossing agreements, support the field, and restore—records closed clean at the end.</p>
         </article>
       </div>
     </div>
@@ -1272,7 +1343,7 @@
         <span class="state">Local permitting</span>
         <span class="state">Field support</span>
       </div>
-      <p class="coverage-note">Easement acquisition where permitted or licensed; non-environmental permitting and construction field support aligned to your corridor and schedule.</p>
+      <p class="coverage-note">Utility and midstream easement acquisition where permitted or licensed; seismic permitting, crossing agreements, and construction field support aligned to your corridor and schedule.</p>
     </div>
   </section>
 
@@ -1361,9 +1432,11 @@
         <fieldset>
           <legend class="services-legend">Services</legend>
           <div class="services-grid">
+            <label class="check"><input type="checkbox" name="services" value="Utility easements and non-environmental permits" /> Utility easements &amp; non-environmental permits</label>
+            <label class="check"><input type="checkbox" name="services" value="Midstream easements and permits" /> Midstream easements &amp; permits</label>
+            <label class="check"><input type="checkbox" name="services" value="Seismic permitting" /> Seismic permitting</label>
+            <label class="check"><input type="checkbox" name="services" value="Crossing agreements" /> Crossing agreements</label>
             <label class="check"><input type="checkbox" name="services" value="Title" /> Title</label>
-            <label class="check"><input type="checkbox" name="services" value="Easement acquisition" /> Easement acquisition</label>
-            <label class="check"><input type="checkbox" name="services" value="Highway/rail/occupancy permits" /> Highway/rail/occupancy permits</label>
             <label class="check"><input type="checkbox" name="services" value="Construction field support" /> Construction field support</label>
             <label class="check"><input type="checkbox" name="services" value="Planning" /> Planning</label>
             <label class="check"><input type="checkbox" name="services" value="Permit compliance" /> Permit compliance</label>
