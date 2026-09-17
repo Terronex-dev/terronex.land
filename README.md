@@ -8,6 +8,7 @@ Static marketing site for **Terronex LLC** — utility easements and non-environ
 - `404.html` — real not-found page (Cloudflare Pages static 404)
 - `privacy.html` — short Terronex LLC privacy note for the estimate form
 - `assets/` — header lockup, favicons, apple-touch icon, Open Graph image
+- `assets/software/` — product card screenshots (Tractsource, ROWScope, ROWFlow)
 - `favicon.ico` — default favicon
 - `robots.txt` — allow all; sitemap pointer
 - `sitemap.xml` — homepage and privacy
