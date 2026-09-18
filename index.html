@@ -974,6 +974,10 @@
       padding: 0;
       min-width: 0;
     }
+    .permitting-needs {
+      display: grid;
+      gap: 0.85rem;
+    }
     .services-legend {
       font-size: 0.8125rem;
       font-weight: 600;
@@ -1481,6 +1485,28 @@
             <label class="check"><input type="checkbox" name="services" value="Permit compliance" /> Permit compliance</label>
           </div>
         </fieldset>
+        <fieldset class="permitting-needs">
+          <legend class="services-legend">Permitting needs</legend>
+          <div class="field">
+            <label class="field-label" for="estimate-crossings">Approx. # of crossings <span class="field-optional">(optional)</span></label>
+            <input id="estimate-crossings" name="crossings" type="number" inputmode="numeric" min="0" step="1" />
+          </div>
+          <div>
+            <p class="services-legend" id="estimate-permit-types-legend">Crossing / permit types <span class="field-optional">(optional)</span></p>
+            <div class="services-grid" role="group" aria-labelledby="estimate-permit-types-legend">
+              <label class="check"><input type="checkbox" name="permit_types" value="Railroad crossing / occupancy" /> Railroad crossing / occupancy</label>
+              <label class="check"><input type="checkbox" name="permit_types" value="Highway / VDOT / municipal occupancy" /> Highway / VDOT / municipal occupancy</label>
+              <label class="check"><input type="checkbox" name="permit_types" value="Foreign-utility crossing" /> Foreign-utility crossing</label>
+              <label class="check"><input type="checkbox" name="permit_types" value="Land-use / non-environmental permit" /> Land-use / non-environmental permit</label>
+              <label class="check"><input type="checkbox" name="permit_types" value="Seismic permit" /> Seismic permit</label>
+              <label class="check"><input type="checkbox" name="permit_types" value="Other" id="estimate-permit-other-check" /> Other</label>
+            </div>
+          </div>
+          <div class="field" id="estimate-permit-other-wrap" hidden>
+            <label class="field-label" for="estimate-permit-other">Other permit type <span class="field-optional">(optional)</span></label>
+            <input id="estimate-permit-other" name="permit_types_other" type="text" maxlength="200" autocomplete="off" placeholder="Short description" />
+          </div>
+        </fieldset>
         <div class="field">
           <label class="field-label" for="estimate-notes">Notes <span class="field-optional">(optional)</span></label>
           <textarea id="estimate-notes" name="notes" rows="4"></textarea>
@@ -1595,6 +1621,21 @@
       if (lineInput) lineInput.addEventListener("input", clearScaleError);
       if (areaInput) areaInput.addEventListener("input", clearScaleError);
 
+      var permitOtherCheck = document.getElementById("estimate-permit-other-check");
+      var permitOtherWrap = document.getElementById("estimate-permit-other-wrap");
+      var permitOtherInput = document.getElementById("estimate-permit-other");
+
+      function syncPermitOtherField() {
+        var show = !!(permitOtherCheck && permitOtherCheck.checked);
+        if (permitOtherWrap) permitOtherWrap.hidden = !show;
+        if (!show && permitOtherInput) permitOtherInput.value = "";
+      }
+
+      if (permitOtherCheck) {
+        permitOtherCheck.addEventListener("change", syncPermitOtherField);
+        syncPermitOtherField();
+      }
+
       if (form) {
         form.addEventListener("submit", function (e) {
           e.preventDefault();
@@ -1627,6 +1668,16 @@
             form.querySelectorAll('input[name="services"]:checked'),
             function (cb) { return cb.value; }
           );
+          var permitTypes = Array.prototype.map.call(
+            form.querySelectorAll('input[name="permit_types"]:checked'),
+            function (cb) {
+              if (cb.value === "Other") {
+                var otherText = fieldValue("estimate-permit-other");
+                return otherText ? "Other: " + otherText : "Other";
+              }
+              return cb.value;
+            }
+          );
           var subject = "Project estimate request — " + (company || name);
           var body = [
             "PROJECT ESTIMATE REQUEST",
@@ -1643,6 +1694,8 @@
             "Area (sq miles): " + orDash(area),
             "",
             "Services: " + (services.length ? services.join("; ") : "—"),
+            "Approx. # of crossings: " + orDash(fieldValue("estimate-crossings")),
+            "Crossing/permit types: " + (permitTypes.length ? permitTypes.join(", ") : "—"),
             "",
             "Notes:",
             orDash(fieldValue("estimate-notes")),
